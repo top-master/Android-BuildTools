@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainView</class>
+ <widget class="QWidget" name="MainView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>419</width>
+    <height>353</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BuildTool</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Builder</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="4" column="0">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="archArm">
+           <property name="text">
+            <string>armeabi-v7a</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QCheckBox" name="archMips">
+           <property name="text">
+            <string>mips</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QCheckBox" name="archMips64">
+           <property name="text">
+            <string>mips64</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QCheckBox" name="archArm64">
+           <property name="text">
+            <string>arm64-v8a</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QCheckBox" name="archIntel64">
+           <property name="text">
+            <string>x86_64</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QCheckBox" name="archIntel">
+           <property name="text">
+            <string>x86</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="1">
+        <spacer name="buildSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>74</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="2">
+        <widget class="QToolButton" name="buildButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>&amp;Build</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <layout class="QHBoxLayout" name="xdAddressLayout">
+         <item>
+          <widget class="QLabel" name="qmakeSelectLabel">
+           <property name="text">
+            <string>&amp;XD make:</string>
+           </property>
+           <property name="buddy">
+            <cstring>qmakeFileEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="qmakeFileEdit">
+           <property name="toolTip">
+            <string>ANDROID_NDK_ROOT environment variable</string>
+           </property>
+           <property name="text">
+            <string>D:/projects/XD_4.8.5/bin/qmake.exe</string>
+           </property>
+           <property name="placeholderText">
+            <string>Path to qmake.exe file</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="qmakeSelectButton">
+           <property name="text">
+            <string>&amp;Browse</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <layout class="QHBoxLayout" name="ndkAddressLayout">
+         <item>
+          <widget class="QLabel" name="addressSelectLabel">
+           <property name="text">
+            <string>Android &amp;NDK:</string>
+           </property>
+           <property name="buddy">
+            <cstring>ndkAddressEidit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="ndkAddressEidit">
+           <property name="toolTip">
+            <string>ANDROID_NDK_ROOT environment variable</string>
+           </property>
+           <property name="placeholderText">
+            <string>Path to NDK-bundle root dir</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="ndkSelectButton">
+           <property name="text">
+            <string>&amp;Browse</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0" colspan="3">
+        <layout class="QHBoxLayout" name="xdAddressLayout_2">
+         <item>
+          <widget class="QLabel" name="projectSelectLabel">
+           <property name="text">
+            <string>&amp;Project:</string>
+           </property>
+           <property name="buddy">
+            <cstring>projectFileEdit</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="projectFileEdit">
+           <property name="toolTip">
+            <string>ANDROID_NDK_ROOT environment variable</string>
+           </property>
+           <property name="text">
+            <string>D:/projects/VpnProject/client-android/client-android.pro</string>
+           </property>
+           <property name="placeholderText">
+            <string>Path to projects *.pro file</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="projectSelectButton">
+           <property name="text">
+            <string>&amp;Browse</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0" colspan="3">
+        <widget class="QPlainTextEdit" name="logView"/>
+       </item>
+      </layout>
+      <zorder>buildButton</zorder>
+      <zorder>logView</zorder>
+      <zorder>buildSpacer</zorder>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
